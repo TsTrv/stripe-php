@@ -2,9 +2,9 @@
 
 // File generated from our OpenAPI spec
 
-namespace Stripe\Service;
+namespace Stripe\Service\Identity;
 
-class IdentityService extends \Stripe\Service\AbstractService
+class VerificationSession extends \Stripe\Service\AbstractService
 {
     /**
      * Creates a new identity object.
@@ -14,7 +14,7 @@ class IdentityService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Identity
+     * @return \Stripe\Identity\VerificationSessions
      */
     public function all($params = null, $opts = null)
     {
@@ -31,7 +31,7 @@ class IdentityService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Identity
+     * @return \Stripe\Identity\VerificationSessions
      */
     public function create($params = null, $opts = null)
     {
@@ -49,11 +49,11 @@ class IdentityService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Identity
+     * @return \Stripe\Identity\VerificationSessions
      */
-    public function delete($id, $params = null, $opts = null)
+    public function cancel($id, $params = null, $opts = null)
     {
-        return $this->request('delete', $this->buildPath('/v1/identity/verification_sessions/%s', $id), $params, $opts);
+        return $this->request('post', $this->buildPath('/v1/identity/verification_sessions/%s/cancel', $id), $params, $opts);
     }
 
     /**
@@ -65,7 +65,7 @@ class IdentityService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Identity
+     * @return \Stripe\Identity\VerificationSessions
      */
     public function retrieve($id, $params = null, $opts = null)
     {
@@ -83,7 +83,7 @@ class IdentityService extends \Stripe\Service\AbstractService
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\Identity
+     * @return \Stripe\Identity\VerificationSessions
      */
     public function update($id, $params = null, $opts = null)
     {
