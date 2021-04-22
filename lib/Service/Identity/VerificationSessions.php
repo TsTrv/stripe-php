@@ -4,7 +4,7 @@
 
 namespace Stripe\Service\Identity;
 
-class VerificationSession extends \Stripe\Service\AbstractService
+class VerificationSessions extends \Stripe\Service\AbstractService
 {
     /**
      * Creates a new identity object.
