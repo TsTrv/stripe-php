@@ -84,6 +84,7 @@ class CoreServiceFactory extends \Stripe\Service\AbstractServiceFactory
         'exchangeRates' => ExchangeRateService::class,
         'fileLinks' => FileLinkService::class,
         'files' => FileService::class,
+        'identity' => IdentityService::class,
         'invoiceItems' => InvoiceItemService::class,
         'invoices' => InvoiceService::class,
         'issuing' => Issuing\IssuingServiceFactory::class,
